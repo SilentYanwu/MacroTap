@@ -1,0 +1,8 @@
+{
+  "step_delay": 0.5,
+  "loop_delay": 0.5,
+  "loop_count": 0,
+  "start_hotkey": "f",
+  "stop_hotkey": "q",
+  "bg_image": null
+}
