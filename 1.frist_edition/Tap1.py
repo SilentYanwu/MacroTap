@@ -11,7 +11,7 @@ import os
 class AutoClicker:
     def __init__(self, root):
         self.root = root
-        self.root.title("多步骤连点器")
+        self.root.title("自定义连点器")
         self.root.geometry("800x600")
         self.root.resizable(False, False)
         
@@ -56,6 +56,7 @@ class AutoClicker:
                 self.bg_image = Image.open(image_path)
                 
                 # 调整图片大小以适应窗口
+                # 获取用户显示器的分辨率
                 screen_width = self.root.winfo_screenwidth()
                 screen_height = self.root.winfo_screenheight()
                 
@@ -79,7 +80,7 @@ class AutoClicker:
                 
                 # 创建主框架
                 self.main_frame = tk.Frame(self.canvas, bg="#ffffff", bd=2, relief="raised")
-                self.main_frame.place(relx=0.5, rely=0.5, anchor="center", width=500, height=500)
+                self.main_frame.place(relx=0.5, rely=0.5, anchor="center", width=500)
                 
                 # 设置主框架透明度
                 self.main_frame.configure(bg=self._from_rgb((240, 240, 240, 200)))
@@ -91,6 +92,7 @@ class AutoClicker:
             self.main_frame = tk.Frame(self.root, bg="#f0f0f0", bd=2, relief="raised")
             self.main_frame.pack(expand=True, fill="both", padx=20, pady=20)
     
+    # RGB转为为颜色代码
     def _from_rgb(self, rgb):
         return "#%02x%02x%02x" % rgb[:3]
     
