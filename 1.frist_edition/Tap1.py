@@ -7,6 +7,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from PIL import Image, ImageTk
 import os
+import math
 
 class AutoClicker:
     def __init__(self, root):
