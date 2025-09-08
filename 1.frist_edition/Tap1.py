@@ -20,7 +20,7 @@ class AutoClicker:
         self.root.attributes('-alpha', 0.9)
         
         # 加载背景图片
-        self.set_background("bg.png")
+        self.set_background("Resource/bg.png")
         
         # 步骤列表
         self.steps = []
